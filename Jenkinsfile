@@ -2,16 +2,9 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Check Docker') {
+        stage('GitHub Integration Success') {
             steps {
-                sh 'docker --version'
-            }
-        }
-
-        stage('Check Running Containers') {
-            steps {
-                sh 'docker ps'
+                echo 'GitHub + Jenkins integration successful!'
             }
         }
     }
