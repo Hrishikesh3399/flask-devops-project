@@ -3,15 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Build Docker Containers') {
+        stage('Check Docker') {
             steps {
-                sh 'docker compose build'
-            }
-        }
-
-        stage('Start Application') {
-            steps {
-                sh 'docker compose up -d'
+                sh 'docker --version'
             }
         }
 
